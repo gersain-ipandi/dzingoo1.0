@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from themes.potenzaglobalsolutions.com/html/academic/course.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Aug 2022 14:49:22 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Dzingoo Formations Consultants" />
+    <meta name="description" content="Site des formateurs Dzingoo" />
+    <meta name="author" content="nibenz.com" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Dzingoo - Catalogue formations</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/logo_dzingoo.png" />
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&amp;display=swap" rel="stylesheet">
+
+    <!-- CSS Global Compulsory (Do not remove)-->
+    <link rel="stylesheet" href="css/font-awesome/all.min.css" />
+    <link rel="stylesheet" href="css/flaticon/flaticon.css" />
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+
+    <!-- Page CSS Implementing Plugins (Remove the plugin CSS here if site does not use that feature)-->
+    <link rel="stylesheet" href="css/owl-carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/animate/animate.min.css"/>
+
+    <!-- Template Style -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+     <!--=================================
+    Header -->
+    <%- include('partials/header.ejs') %> 
+    <!--=================================
+    Header -->
+
+    <!--=================================
+    inner-header -->
+    <section class="inner-banner bg-overlay-black-70" style="background-image: url('images/bg/08.jpg'); background-repeat: no-repeat; background-position: center; background-size: cover;">
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-12">
+            <div class="text-center">
+              <h1 class="text-white text-center">NOTRE CATALOGUE DE FORMATIONS PROFESSIONNELLES</h1>
+            </div>
+            <div class="d-flex justify-content-center ">
+              <ol class="breadcrumb mb-0 p-0">
+              <li class="breadcrumb-item text-center">
+                Retrouvez l’ensemble de nos thématiques de formation professionnelle pour adultes. DZINGOO dispose d’un catalogue de formations répondant à la majeure partie des besoins en formation des entreprises. Notre objectif, devenir votre partenaire privilégié pour accompagner vos collaborateurs à développer leurs compétences et répondre à vos obligations de formation. Formation obligatoire ou formation permettant de développer les compétences, DZINGOO est en mesure de répondre à tous vos besoins. Vous recherchez une formation hors catalogue ou une formation sur mesure ? Contactez nos chefs de projet afin que nous puissions étudier votre besoin.
+                </li>
+              
+            </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--=================================
+    inner-header -->
+
+    <!--=================================
+    Course item -->
+    
+    <!--=================================
+    Course item -->
+
+    <!--=================================
+    about -->
+    <section class="space-ptb bg-dark">
+      <div class="container">
+        <div class="row mb-3 mb-md-0">
+          <div class="col-md-8">
+            <div class="section-title">
+              <h2 class="title">Catalogue de formations</h2>
+            </div>
+          </div>
+          <div class="col-md-4 text-md-right">
+            <a class="btn btn-primary" href="#">Choisir une formation</a>
+          </div>
+        </div>
+        <div class="row popular-courses">
+          <div class="col-lg-12 mb-12 mb-lg-0">
+            
+            <div class="accordion" id="accordionExample">
+              <% for(var i = 0; i < formations.length; i++) { %> 
+              <div class="card">
+                <div class="card-header" id="heading<%= formations[i]._id %>">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left d-flex justify-content-between" type="button" data-toggle="collapse" data-target="#collapse<%= formations[i]._id %> " aria-expanded="true" aria-controls="collapse<%= formations[i]._id %>">
+                      <span> <%= formations[i].categorie_formation %>  </span> Disponible
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapse<%= formations[i]._id %>" class="collapse" aria-labelledby="heading<%= formations[i]._id %>" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <a href="/details_formation?id=<%= formations[i]._id %>"><%= formations[i].titre_formation %> </a>
+                    <p class="text-dark">Niveau : <%= formations[i].niveau %></p>
+                  </div>
+                </div>
+              </div>
+              <% } %> 
+              
+            </div>
+          </div>
+           
+          <!-- <div class="col-lg-6">
+            <div class="accordion" id="accordionExample2">
+              <div class="card">
+                <div class="card-header" id="headingSaven">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left d-flex justify-content-between" type="button" data-toggle="collapse" data-target="#collapseSaven" aria-expanded="true" aria-controls="collapseSaven">
+                      <span>Sciences & Medicine</span>07 Courses
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseSaven" class="collapse" aria-labelledby="headingSaven" data-parent="#accordionExample2">
+                  <div class="card-body">
+                    <a href="#">History of Art, Architecture & Design</a>
+                    <p class="text-dark">$ 24,800 Fee / Yearly | 4 Years</p>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+    <!--=================================
+    about -->
+
+    <!--=================================
+    client-->
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+              <div class="owl-carousel our-clients bg-white p-0" data-nav-arrow="false" data-items="5" data-md-items="4" data-sm-items="3" data-xs-items="2" data-xx-items="1" data-space="0" data-autoheight="true">
+                  <!-- item-01 START -->
+                  <div class="item">
+                    <img class="img-fluid center-block mx-auto grayscale" src="images/client/01.svg" alt="">
+                  </div>
+                  <!-- item-01 End -->
+
+                  <!-- item-02 START -->
+                  <div class="item">
+                    <img class="img-fluid center-block mx-auto grayscale" src="images/client/02.svg" alt="">
+                  </div>
+                  <!-- item-02 End -->
+
+                  <!-- item-03 START -->
+                  <div class="item">
+                    <img class="img-fluid center-block mx-auto grayscale" src="images/client/03.svg" alt="">
+                  </div>
+                  <!-- item-03 End -->
+
+                  <!-- item-04 START -->
+                  <div class="item">
+                    <img class="img-fluid center-block mx-auto grayscale" src="images/client/04.svg" alt="">
+                  </div>
+                  <!-- item-04 End -->
+
+                  <!-- item-05 START -->
+                  <div class="item">
+                    <img class="img-fluid center-block mx-auto grayscale" src="images/client/05.svg" alt="">
+                  </div>
+                  <!-- item-05 End -->
+
+                  <!-- item-06 START -->
+                  <div class="item">
+                    <img class="img-fluid center-block mx-auto grayscale" src="images/client/06.svg" alt="">
+                  </div>
+                  <!-- item-06 End -->
+
+                  <!-- item-07 START -->
+                  <div class="item">
+                    <img class="img-fluid center-block mx-auto grayscale" src="images/client/07.svg" alt="">
+                  </div>
+                  <!-- item-07 End -->
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <%- include('partials/stat_widget.ejs') %>
+    <!--=================================
+    client-->
+      <div class="mb-5"></div>
+    <!--=================================
+    Footer-->
+    <%- include('partials/footer.ejs') %>
+    <!--=================================
+    Footer-->
+
+    <!--=================================
+    Back To Top-->
+    <div id="back-to-top" class="back-to-top">Top</div>
+    <!--=================================
+    Back To Top-->
+
+    <!--=================================
+    Javascript -->
+
+    <!-- JS Global Compulsory (Do not remove)-->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/popper/popper.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
+    <script src="js/jquery.appear.js"></script>
+    <script src="js/counter/jquery.countTo.js"></script>
+    <script src="js/owl-carousel/owl.carousel.min.js"></script>
+
+
+    <!-- Template Scripts (Do not remove)-->
+    <script src="js/custom.js"></script>
+
+  </body>
+
+
+<!-- Mirrored from themes.potenzaglobalsolutions.com/html/academic/course.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Aug 2022 14:49:22 GMT -->
+</html>

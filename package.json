@@ -1,0 +1,25 @@
+{
+  "name": "dzingoo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Projet du site internet de l'organisme de formation Dzingoo",
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "body-parser": "^1.19.1",
+    "debug": "~2.6.9",
+    "ejs": "^3.1.8",
+    "express": "~4.16.1",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.15.6",
+    "http-errors": "~1.6.3",
+    "mongoose": "^6.5.4",
+    "morgan": "~1.9.1",
+    "connect-flash": "^0.1.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
+  }
+}
